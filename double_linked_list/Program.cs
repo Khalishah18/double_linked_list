@@ -90,6 +90,19 @@ namespace double_linked_list
                 current = current.next) { }
             return (current != null);
         }
+        public bool dellNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (search(rollNo, ref previous, ref current) == false)
+                return false;
+            //the begining of data
+            if (current.next == null)
+            {
+                previous.next = null;
+                return true;
+            }
+        }
     }
     internal class Program
     {
