@@ -102,6 +102,18 @@ namespace double_linked_list
                 previous.next = null;
                 return true;
             }
+            //node between two nodes in the list
+            if  (current == START)
+            {
+                START = START.next;
+                if (START != null)
+                    START.prev = null;
+                return true;
+            }
+            /*if the to be deleted is in between the list then the following lines of executed. */
+            previous.next = current.next;
+            current.next.prev = previous;
+            return true;
         }
     }
     internal class Program
