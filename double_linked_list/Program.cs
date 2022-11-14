@@ -160,6 +160,14 @@ namespace double_linked_list
     {
         static void Main(string[] args)
         {
+            DoubleLinkedList obj = new DoubleLinkedList();
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMenu");
+                }
+            }
         }
     }
 }
